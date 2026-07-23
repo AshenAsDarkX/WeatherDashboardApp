@@ -10,7 +10,18 @@ import CoreLocation
 
 @MainActor
 final class WeatherService {
-    private let apiKey = "75e75a176012123295e1dbf8e6f4a80b"
+    private var apiKey: String {
+        if let envKey = ProcessInfo.processInfo.environment["OPENWEATHER_API_KEY"], !envKey.isEmpty {
+            return envKey
+        }
+        if let url = Bundle.main.url(forResource: "Secrets", withExtension: "plist"),
+           let data = try? Data(contentsOf: url),
+           let plist = try? PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any],
+           let key = plist["OpenWeatherAPIKey"] as? String, !key.isEmpty {
+            return key
+        }
+        return "YOUR_OPENWEATHER_API_KEY"
+    }
 
     func fetchWeather(lat: Double, lon: Double) async throws -> WeatherResponse {
         // excluded 'minutely', 'hourly', and 'alerts' to reduce payload size.

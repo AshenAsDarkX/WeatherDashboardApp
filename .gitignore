@@ -1,0 +1,11 @@
+# Secrets & Environment configuration files
+Secrets.plist
+*.xcconfig
+!Secrets.plist.template
+
+# Xcode & User-specific files
+.DS_Store
+*.xcuserdata/
+DerivedData/
+build/
+*.xcworkspace/xcuserdata/
