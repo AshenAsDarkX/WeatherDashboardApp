@@ -2,7 +2,7 @@
 //  PreviewHelper.swift
 //  WeatherDashboardTemplate
 //
-//  Created by girish lukka on 19/10/2025.
+//  Created by ashen himeshana.
 //
 
 import Foundation

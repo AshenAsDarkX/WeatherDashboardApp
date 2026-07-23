@@ -2,7 +2,7 @@
 //  VisitedPLacesView.swift
 //  WeatherDashboardTemplate
 //
-//  Created by girish lukka on 18/10/2025.
+//  Created by ashen himeshana.
 //
 
 import SwiftUI

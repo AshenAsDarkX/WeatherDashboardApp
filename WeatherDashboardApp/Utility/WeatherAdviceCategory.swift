@@ -2,7 +2,7 @@
 //  WeatherAdviceCategory.swift
 //  WeatherDashboard
 //
-//  Created by girish lukka on 11/10/2025.
+//  Created by ashen himeshana.
 //
 
 import Foundation
